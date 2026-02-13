@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects | Samuel's Creative Agency</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR (Matched to Home) */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0d6efd;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #0d6efd;
+        }
+
+        /* PROJECTS HEADER */
+        .projects-header {
+            padding: 80px 10% 40px;
+            text-align: center;
+            background: white;
+        }
+
+        .projects-header h1 {
+            font-size: 42px;
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+
+        .projects-header p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* PROJECTS GRID */
+        .projects-container {
+            padding: 60px 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .category {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #0d6efd;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .project-content h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: #0f172a;
+        }
+
+        .project-content p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .view-link {
+            text-decoration: none;
+            color: #0d6efd;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .view-link:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0f172a;
+            color: #aaa;
+            text-align: center;
+            padding: 40px 10%;
+        }
+
+        footer a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:768px){
+            .projects-container { grid-template-columns: 1fr; padding: 40px 5%; }
+            .projects-header h1 { font-size: 32px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">SAMUEL'S CREATIVE.PAGE</a>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" style="color: #0d6efd;">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<header class="projects-header">
+    <h1>Our Portfolio</h1>
+    <p>A collection of high-impact digital solutions we've crafted for clients across the globe.</p>
+</header>
+
+<section class="projects-container">
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Corporate Website">
+        </div>
+        <div class="project-content">
+            <span class="category">Web Development</span>
+            <h3>TechConsult Pro</h3>
+            <p>A full-scale enterprise platform with real-time analytics and a mobile-first responsive interface.</p>
+            <a href="#" class="view-link">View Project &rarr;</a>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" alt="E-commerce Store">
+        </div>
+        <div class="project-content">
+            <span class="category">E-Commerce</span>
+            <h3>Luxe Essentials</h3>
+            <p>An elegant online shopping experience featuring seamless checkout and inventory management.</p>
+            <a href="#" class="view-link">View Project &rarr;</a>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Dashboard Design">
+        </div>
+        <div class="project-content">
+            <span class="category">UI/UX Design</span>
+            <h3>DataStream Dashboard</h3>
+            <p>Intuitive user interface designed for complex data visualization and user interaction.</p>
+            <a href="#" class="view-link">View Project &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Creative.Co. All rights reserved.</p>
+    <p style="margin-top: 10px;">
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms of Service</a>
+    </p>
+</footer>
+
+</body>
+</html>
